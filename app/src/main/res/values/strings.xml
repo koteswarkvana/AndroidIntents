@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidIntents</string>
+    <string name="et_etr_value">Enter value</string>
+    <string name="bt_sub">Submit</string>
 </resources>
