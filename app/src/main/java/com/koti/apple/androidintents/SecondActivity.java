@@ -9,13 +9,13 @@ public class SecondActivity extends AppCompatActivity {
 
     private static final String TAG = "SecondActivity";
     private TextView tv_msg;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_screen);
-        Log.e(TAG, "onCreate: intents using ...");
-        String msg=getIntent().getExtras().getString(MainActivity.MESSAGE,"");
-        tv_msg=(TextView) findViewById(R.id.tv_msg);
+        String msg = getIntent().getExtras().getString(MainActivity.MESSAGE, "");
+        tv_msg = (TextView) findViewById(R.id.tv_msg);
         tv_msg.setText(msg);
     }
 }

@@ -28,5 +28,15 @@
         android:layout_height="wrap_content"
         android:text="@string/bt_sub"
         android:textAllCaps="false" />
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="46dp"
+        android:text="TextView" />
+
 
 </LinearLayout>
