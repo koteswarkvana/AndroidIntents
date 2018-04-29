@@ -20,6 +20,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     private TextView tv_msg;
     private EditText et_message_information;
     private Button bt_send_email;
+    private Button bt_open_android_site;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,9 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_second_screen);
         et_message_information = (EditText) findViewById(R.id.et_message_information);
         bt_send_email = (Button) findViewById(R.id.bt_send_email);
+        bt_open_android_site = (Button) findViewById(R.id.bt_open_android_site);
         bt_send_email.setOnClickListener(this);
+        bt_open_android_site.setOnClickListener(this);
         String strMsg = getIntent().getExtras().getString(MainActivity.STR_MESSAGE, "");
         int intVal = getIntent().getExtras().getInt(MainActivity.INT_VALUE, 0);
         // TODO:- unable to accessing the float and long value
@@ -70,6 +73,12 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                 emailIntent.putExtra(Intent.EXTRA_TEXT, et_message_information.getText().toString());
                 // Displaying chooser email apps along with title "Send email..."
                 startActivity(Intent.createChooser(emailIntent, "Send email..."));
+                break;
+
+            case R.id.bt_open_android_site:
+                Log.e(TAG, "onClick: bt_open android site >> ");
+                Intent openSiteIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com/reference/android/app/Activity"));
+                startActivity(openSiteIntent);
                 break;
         }
     }
