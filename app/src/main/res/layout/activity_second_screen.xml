@@ -34,5 +34,15 @@
         android:textAllCaps="false"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/bt_open_android_site"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:text="Open Android Site"
+        android:textAllCaps="false"
+        android:textStyle="bold" />
+
 
 </LinearLayout>
